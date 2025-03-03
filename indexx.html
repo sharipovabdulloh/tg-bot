@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veb Sahifa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">MyWebsite</h1>
+            <nav>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#" class="hover:text-gray-300">Bosh sahifa</a></li>
+                    <li><a href="#about" class="hover:text-gray-300">Haqimizda</a></li>
+                    <li><a href="#services" class="hover:text-gray-300">Xizmatlar</a></li>
+                    <li><a href="#contact" class="hover:text-gray-300">Aloqa</a></li>
+                </ul>
+                <!-- Mobile menu (hamburger) -->
+                <div class="md:hidden">
+                    <button id="menuToggle" class="text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden bg-blue-600 text-white">
+        <ul class="space-y-4 px-4 py-4">
+            <li><a href="#" class="block hover:text-gray-300">Bosh sahifa</a></li>
+            <li><a href="#about" class="block hover:text-gray-300">Haqimizda</a></li>
+            <li><a href="#services" class="block hover:text-gray-300">Xizmatlar</a></li>
+            <li><a href="#contact" class="block hover:text-gray-300">Aloqa</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+        class="bg-gradient-to-r from-blue-600 to-teal-500 text-white h-96 flex justify-center items-center text-center">
+        <div class="px-6 py-12">
+            <h2 class="text-4xl font-semibold mb-4">O'zingizning veb-sahifangizni yaratishda yordam olishni xohlaysizmi?
+            </h2>
+            <p class="mb-6 text-lg">Bizning xizmatlarimiz bilan onlayn dunyoda iz qoldiring.</p>
+            <a href="#contact" class="bg-white text-blue-600 px-6 py-2 rounded-full text-xl hover:bg-gray-100">Biz bilan
+                bog'laning</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white text-center">
+        <h2 class="text-3xl font-semibold mb-6">Haqimizda</h2>
+        <p class="max-w-2xl mx-auto text-gray-600 text-lg">
+            Bizning kompaniya o'z mijozlariga sifatli va zamonaviy veb-sahifalar yaratishda yordam beradi. Bizning
+            xizmatlarimizni o'zingizning ehtiyojlaringizga moslashtiring!
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100 text-center">
+        <h2 class="text-3xl font-semibold mb-12">Xizmatlarimiz</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">Veb Dizayn</h3>
+                <p class="text-gray-600">Modern va responsiv veb dizaynlar yaratamiz, foydalanuvchilarni jalb qilish
+                    uchun optimallashtiramiz.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">SEO Xizmatlari</h3>
+                <p class="text-gray-600">Saytingizni Google va boshqa qidiruv tizimlarida yuqori o'rinlarga chiqarish
+                    uchun SEO optimizatsiya qilamiz.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">Veb Dasturlash</h3>
+                <p class="text-gray-600">Murakkab veb ilovalar va tizimlar yaratish, dasturlash tillari bilan ishlash.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-blue-600 text-white text-center">
+        <h2 class="text-3xl font-semibold mb-6">Biz bilan bog'laning</h2>
+        <p class="mb-6 text-lg">Agar sizda savollar bo'lsa, biz bilan bog'laning, biz yordam berishga tayyormiz!</p>
+        <a href="mailto:info@mywebsite.com"
+            class="bg-white text-blue-600 px-6 py-2 rounded-full text-xl hover:bg-gray-100">Email orqali yozing</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="text-center">
+            <p>&copy; 2025 MyWebsite. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
